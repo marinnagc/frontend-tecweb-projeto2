@@ -1,0 +1,7 @@
+.heart-icon {
+    transition: color 0.3s ease;
+}
+
+.heart-icon:hover {
+    color: red; /* Muda para vermelho sólido ao passar o mouse */
+}

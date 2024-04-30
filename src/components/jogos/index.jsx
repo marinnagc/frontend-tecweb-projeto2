@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import AppBar from '../AppBar';
+import Coracao from '../coracao'; 
 import './index.css';
 
 const Jogos = () => {
@@ -25,9 +26,10 @@ const Jogos = () => {
       {campeonatos[nomeCampeonato] ? (
         <div>
           {campeonatos[nomeCampeonato].map((jogo, index) => (
-            <div key={index}>
+            <div key={index} className='jogo-container'>
               <h3 className='partida'>{jogo[0]}</h3>
               <div className='video' dangerouslySetInnerHTML={{ __html: jogo[1] }} />
+              <Coracao /> {/* Inclui o ícone de coração */}
             </div>
           ))}
         </div>

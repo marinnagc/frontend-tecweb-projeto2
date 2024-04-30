@@ -4,17 +4,23 @@
     margin-top: 50px;
     margin-left: 15px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 .partida{
     font-size: 27px;
     color: white;
-    margin-left: 620px;
     margin-top: 40px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 .video{
     width: 50%;
     height: 50%;
-    margin-left: 400px;
+    margin-left: 460px;
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
 }
+
