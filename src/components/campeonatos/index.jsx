@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import axios from 'axios';
+import './index.css';
 
 const Campeonatos = () => {
   const [campeonatos, setCampeonatos] = useState({});
@@ -20,11 +21,14 @@ const Campeonatos = () => {
   };
 
   return (
-    <div>
+    <>
+    <h2 className='titulo'>Selecione um campeonato</h2>
+    <div className='caixas'>
       {Object.keys(campeonatos).map((campeonato) => (
-        <Link to={`/campeonato/${encodeURIComponent(campeonato)}`}>{campeonato}</Link>
+        <Link className='campeonato' to={`/campeonato/${encodeURIComponent(campeonato)}`}>{campeonato}</Link>
       ))}
     </div>
+    </>
   );
 }
 
