@@ -5,7 +5,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App.jsx'
-import Editar from './components/Editar'
+import Campeonatos from './components/campeonatos'
+import Jogos from './components/jogos'
 import './index.css'
 
 const router = createBrowserRouter([
@@ -14,8 +15,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "edit/:noteId",
-    element: <Editar />,
+    path: "/campeonato/:nome",
+    element: <Jogos />,
   },
 ]);
 

@@ -1,5 +1,6 @@
 .appbar{
-    background-color: #f7d736;
+    /* background-color:#042027; /* Defina a cor de fundo desejada */
+    background-color: #0b4454 ;
     display: flex;
     justify-content:flex-start;
     align-items: center;
@@ -17,4 +18,7 @@
 
 .subtitle{
     margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
 }

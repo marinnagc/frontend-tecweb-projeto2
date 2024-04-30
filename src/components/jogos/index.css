@@ -1,0 +1,20 @@
+.title{
+    color: white;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+.partida{
+    font-size: 27px;
+    color: white;
+    margin-left: 620px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+.video{
+    width: 50%;
+    height: 50%;
+    margin-left: 400px;
+    margin-top: 40px;
+}

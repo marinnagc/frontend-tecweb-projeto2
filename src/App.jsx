@@ -1,42 +1,19 @@
-import axios from "axios";
-import { useState , useEffect} from "react";
-
-import Note from "./components/Note";
-import AppBar from "./components/AppBar";
-import Formulario from "./components/Formulario";
-import "./App.css";
+// Dentro de App.jsx ou main.jsx
+import {Routes, Route } from 'react-router-dom';
+import Campeonatos from './components/campeonatos';
+import Jogos from './components/jogos';
+import './App.css';
+import React from 'react';
+import AppBar from './components/AppBar';
 
 function App() {
-  const [notes, setNotes] = useState([]); 
-
-  const carregaNotas = () => {
-    axios
-      .get("http://localhost:8000/api/notes/")
-      .then((res) => setNotes(res.data));
-  }
-
-  useEffect(() => {
-    carregaNotas();
-  }, []);
-
-  
-
-  console.log(notes);
-
   return (
     <>
-      <AppBar />
-      <main className="container">
-        <Formulario loadNotes={carregaNotas}/>
-        <div className="card-container">
-          {notes.map((note) => (
-          <Note key={`note__${note.id}`} id={note.id} title={note.title}>
-            {note.content}
-            loadNotes={carregaNotas}
-          </Note>
-        ))}
-        </div>
-      </main>
+    <AppBar></AppBar>
+    <Routes>
+      <Route path="/" element={<Campeonatos />} />
+      <Route path="/campeonato/:nome" element={<Jogos />} />
+    </Routes>
     </>
   );
 }
