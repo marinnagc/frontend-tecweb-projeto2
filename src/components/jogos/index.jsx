@@ -19,6 +19,18 @@ const Jogos = () => {
       .catch(error => console.log(error));
   }, []);
 
+  const criarNote = (event) => {
+    event.preventDefault();
+
+    const data = {
+        "title": titulo,
+        "link": content
+    }
+
+    axios
+        .post("http://localhost:8000/api/notes/", data)
+        .catch((error) => console.log(error));
+}
   return (
     <div>
       <AppBar />
@@ -30,7 +42,7 @@ const Jogos = () => {
               <div className='video' dangerouslySetInnerHTML={{ __html: jogo[1] }} />
               <div className='linha'>
                 <h3 className='partida'>{jogo[0]}</h3>
-                <Coracao />
+                <form className="form-card" onSubmit={criarNote}><Coracao /></form>
               </div>
             </div>
           ))}
