@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
-const Coracao = () => {
+const Coracao = ({ size = '48px' }) => {  // Permite que o tamanho seja configurável
     const [hovered, setHovered] = useState(false);
     const [filled, setFilled] = useState(false);
 
@@ -23,7 +23,7 @@ const Coracao = () => {
     return (
         <FontAwesomeIcon 
             icon={filled || hovered ? fasHeart : farHeart} 
-            style={{ fontSize: '48px', color: 'red', cursor: 'pointer' }}
+            style={{ fontSize: size, color: 'red', cursor: 'pointer' }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onClick={handleClick}

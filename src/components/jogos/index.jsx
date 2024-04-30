@@ -27,9 +27,11 @@ const Jogos = () => {
         <div>
           {campeonatos[nomeCampeonato].map((jogo, index) => (
             <div key={index} className='jogo-container'>
-              <h3 className='partida'>{jogo[0]}</h3>
               <div className='video' dangerouslySetInnerHTML={{ __html: jogo[1] }} />
-              <Coracao /> {/* Inclui o ícone de coração */}
+              <div className='linha'>
+                <h3 className='partida'>{jogo[0]}</h3>
+                <Coracao />
+              </div>
             </div>
           ))}
         </div>
