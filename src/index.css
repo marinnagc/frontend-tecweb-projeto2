@@ -1,0 +1,50 @@
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    color: white;
+    font-size: 2rem;
+}
+.video{
+    width: 50%;
+    height: 50%;
+    margin-left: 360px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+.professional-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(145deg, #0575E6, #021B79);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.professional-button:hover {
+    background: linear-gradient(145deg, #021B79, #0575E6);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.professional-button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transform: translateY(2px);
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.like{
+    display: flex;
+    justify-content: center;
+}

@@ -5,7 +5,7 @@ import Jogos from './components/jogos';
 import './App.css';
 import React from 'react';
 import AppBar from './components/AppBar';
-import Favoritos from './components/favoritos';
+import Favoritos from './JogosFavoritados';
 
 function App() {
   return (

@@ -9,7 +9,7 @@ const Jogos = () => {
   const [campeonatos, setCampeonatos] = useState({});  // Inicializa como objeto vazio
   const { nome } = useParams(); // Captura o nome do campeonato da URL
   const nomeCampeonato = decodeURIComponent(nome);  // Decodifica o nome do campeonato
-  
+  const [favorito, setFavorito] = useState(false)
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/campeonatos/')
@@ -30,6 +30,14 @@ const Jogos = () => {
         .post("http://localhost:8000/api/campeonatos/favoritos/", data)
         .catch((error) => console.log(error));
 }
+
+  const alternarFavorito = (jogo) => {
+    setFavorito(!favorito);
+    if(favorito === false){
+        criarNote(jogo);
+    }
+  };
+
   return (
     <div>
       <AppBar />
@@ -41,14 +49,8 @@ const Jogos = () => {
               <div className='video' dangerouslySetInnerHTML={{ __html: jogo[1] }} />
               <div className='linha'>
                 <h3 className='partida'>{jogo[0]}</h3>
-                
-                {/* curtir c coracao */}
-                <form className="form-card" onSubmit={criarNote}>
-                  <Coracao />
-                </form>
-                
-                {/* curtir com botao de favoritar */}
-                {/* <button className='favoritar' onClick={(e) => criarNote(jogo)}>Favoritar</button> */}
+                <button onClick={() => criarNote(jogo)} type='button' className='professional-button'>Favoritar</button>
+                {/* <button onClick={alternarFavorito(jogo)} type='button' className='professional-button'>{favorito ? 'Favoritar':'Desfavoritar'}</button> */}
               </div>
             </div>
           ))}
