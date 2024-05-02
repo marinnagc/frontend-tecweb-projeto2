@@ -8,7 +8,7 @@ import App from './App.jsx'
 import Campeonatos from './components/campeonatos'
 import Jogos from './components/jogos'
 import './index.css'
-import Favoritos from './components/favoritos/index.jsx';
+import Favoritos from './JogosFavoritados.jsx';
 
 const router = createBrowserRouter([
   {

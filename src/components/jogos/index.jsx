@@ -19,12 +19,11 @@ const Jogos = () => {
       .catch(error => console.log(error));
   }, []);
 
-  const criarNote = (event) => {
-    event.preventDefault();
+  const criarNote = (jogo) => {
 
     const data = {
-        "title": titulo,
-        "link": content
+        "title": jogo[0],
+        "link": jogo[1]
     }
 
     axios
@@ -42,7 +41,11 @@ const Jogos = () => {
               <div className='video' dangerouslySetInnerHTML={{ __html: jogo[1] }} />
               <div className='linha'>
                 <h3 className='partida'>{jogo[0]}</h3>
-                <form className="form-card" onSubmit={criarNote}><Coracao /></form>
+                <form className="form-card" onSubmit={criarNote}>
+                  <Coracao />
+                </form>
+                
+                {/* <button className='favoritar' onClick={(e) => criarNote(jogo)}>Favoritar</button> */}
               </div>
             </div>
           ))}

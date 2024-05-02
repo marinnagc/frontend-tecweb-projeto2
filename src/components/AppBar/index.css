@@ -2,7 +2,6 @@
     /* background-color:#042027; /* Defina a cor de fundo desejada */
     background-color: #0b4454 ;
     display: flex;
-    justify-content:flex-start;
     align-items: center;
     box-shadow: 0 10px 28px rgba(0,0,0,0.30), 0 10px 12px rgba(0,0,0,0.22);
 }
@@ -15,10 +14,11 @@
     max-height: 5%;
     margin-left: 15px;
 }
-
 .subtitle{
     display: flex;
     justify-content: center;
+    position: absolute;
+    align-items: center;
     color: white;
     font-size: 20px;
     text-decoration: none;
