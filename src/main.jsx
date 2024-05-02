@@ -8,6 +8,7 @@ import App from './App.jsx'
 import Campeonatos from './components/campeonatos'
 import Jogos from './components/jogos'
 import './index.css'
+import Favoritos from './components/favoritos/index.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/campeonato/:nome",
     element: <Jogos />,
+  },
+  {
+    path: "/favoritos",
+    element: <Favoritos />,
   },
 ]);
 

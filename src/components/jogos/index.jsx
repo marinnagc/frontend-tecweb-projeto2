@@ -28,7 +28,7 @@ const Jogos = () => {
     }
 
     axios
-        .post("http://localhost:8000/api/notes/", data)
+        .post("http://localhost:8000/api/campeonatos/favoritos/", data)
         .catch((error) => console.log(error));
 }
   return (

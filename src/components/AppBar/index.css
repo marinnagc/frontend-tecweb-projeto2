@@ -17,8 +17,15 @@
 }
 
 .subtitle{
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
     color: white;
     font-size: 20px;
     text-decoration: none;
 }
+.favoritos{
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}	
