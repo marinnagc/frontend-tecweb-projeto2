@@ -3,21 +3,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
-const Coracao = ({ size = '48px' }) => {  // Permite que o tamanho seja configurável
+const Coracao = ({ size = '48px' }) => {
     const [hovered, setHovered] = useState(false);
     const [filled, setFilled] = useState(false);
 
     const handleMouseEnter = () => {
-        if (!filled) setHovered(true);
+        setHovered(true);
     };
 
     const handleMouseLeave = () => {
-        if (!filled) setHovered(false);
+        setHovered(false);
     };
 
     const handleClick = () => {
         setFilled(!filled);
-        setHovered(filled); // Se for desmarcar, desativa o hover também
+        // Após clicar, o estado de 'hovered' deve refletir o novo estado de 'filled'
+        setHovered(!filled);
     };
 
     return (
