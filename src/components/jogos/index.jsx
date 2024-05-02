@@ -41,10 +41,13 @@ const Jogos = () => {
               <div className='video' dangerouslySetInnerHTML={{ __html: jogo[1] }} />
               <div className='linha'>
                 <h3 className='partida'>{jogo[0]}</h3>
+                
+                {/* curtir c coracao */}
                 <form className="form-card" onSubmit={criarNote}>
                   <Coracao />
                 </form>
                 
+                {/* curtir com botao de favoritar */}
                 {/* <button className='favoritar' onClick={(e) => criarNote(jogo)}>Favoritar</button> */}
               </div>
             </div>
