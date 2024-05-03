@@ -8,7 +8,7 @@ const Campeonatos = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/campeonatos/')
+    axios.get('https://projeto-2-backend-mavi-1.onrender.com/api/campeonatos/')
       .then(response => {
         setCampeonatos(response.data);
       })

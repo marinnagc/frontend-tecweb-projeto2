@@ -12,7 +12,7 @@ const Jogos = () => {
   const [favorito, setFavorito] = useState(false)
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/campeonatos/')
+    axios.get('https://projeto-2-backend-mavi-1.onrender.com/api/campeonatos/')
       .then(response => {
         setCampeonatos(response.data);  // Supõe que a resposta é um objeto conforme descrito
       })
