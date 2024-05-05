@@ -12,7 +12,7 @@ const Jogos = () => {
   const [favorito, setFavorito] = useState(false)
 
   useEffect(() => {
-    axios.get('https://projeto-2-backend-mavi-1.onrender.com/api/campeonatos/')
+    axios.get('https://projeto-2-backend-mavi-fqzl.onrender.com/api/campeonatos/')
       .then(response => {
         setCampeonatos(response.data);  // Supõe que a resposta é um objeto conforme descrito
       })
@@ -27,7 +27,7 @@ const Jogos = () => {
     }
 
     axios
-        .post("http://localhost:8000/api/campeonatos/favoritos/", data)
+        .post("https://projeto-2-backend-mavi-fqzl.onrender.com/api/campeonatos/favoritos/", data)
         .catch((error) => console.log(error));
 }
 
