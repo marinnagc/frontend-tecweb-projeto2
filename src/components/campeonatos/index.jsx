@@ -17,7 +17,7 @@ const Campeonatos = () => {
 
   const handleCampeonatoClick = (nome) => {
     let nomeCampeonato = encodeURIComponent(nome.trim()); // Limpa e codifica a URL
-    navigate(`/campeonato/${nomeCampeonato}`);
+    navigate(`https://projeto-2-backend-mavi-fqzl.onrender.com/campeonato/${nomeCampeonato}`);
   };
 
   return (
