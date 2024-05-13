@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     element: <Jogos />,
   },
   {
-    path: "/favoritos",
+    path: "/",
     element: <Favoritos />,
   },
 ]);
