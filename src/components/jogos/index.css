@@ -47,7 +47,7 @@
     font-size: 16px;
     text-transform: uppercase;
     color: #fff;
-    background: linear-gradient(145deg, #0575E6, #021B79);
+    background: linear-gradient(145deg,rgb(8, 239, 8),  rgb(170, 237, 170));
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -57,12 +57,16 @@
 }
 
 .professional-button:hover {
-    background: linear-gradient(145deg, #021B79, #0575E6);
+    background: linear-gradient(145deg, rgb(170, 237, 170),rgb(8, 239, 8));
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .professional-button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
     transform: translateY(2px);
+}
+
+.jogo-container{
+    margin-left: 80px;
 }
 

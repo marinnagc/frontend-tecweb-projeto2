@@ -1,3 +1,19 @@
+/* body {
+    background-color:#042027; Defina a cor de fundo desejada */
+  /* } */
+:root {
+  --primary-color: #0575E6;
+  --secondary-color: #021B79;
+  --background-color: #042027;
+  --text-color: #fff;
+  --font-size-large: 2rem;
+  --font-size-medium: 1rem;
+}
+
 body {
-    background-color:#042027; /* Defina a cor de fundo desejada */
-  }
+  background-color: var(--background-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}

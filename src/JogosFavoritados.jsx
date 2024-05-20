@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {useNavigate, Link} from 'react-router-dom';
 import axios from 'axios';
 import AppBar from './components/AppBar';
+import './index.css';
 
 const JogosFavoritados = () => {
     const [videos, setVideos] = useState([]);
