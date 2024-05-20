@@ -8,7 +8,7 @@ const Campeonatos = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('https://projeto-2-backend-mavi-fqzl.onrender.com/api/campeonatos/')
+    axios.get('http://localhost:8000/api/campeonatos/')
       .then(response => {
         setCampeonatos(response.data);
       })
@@ -17,7 +17,7 @@ const Campeonatos = () => {
 
   const handleCampeonatoClick = (nome) => {
     let nomeCampeonato = encodeURIComponent(nome.trim()); // Limpa e codifica a URL
-    navigate(`https://projeto-2-backend-mavi-fqzl.onrender.com/campeonato/${nomeCampeonato}`);
+    navigate(`http://localhost:8000/campeonato/${nomeCampeonato}`);
   };
 
   return (

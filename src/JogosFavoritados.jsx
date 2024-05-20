@@ -14,10 +14,10 @@ const JogosFavoritados = () => {
         }
     
         axios
-            .delete(`https://projeto-2-backend-mavi-fqzl.onrender.com/api/campeonatos/apagados/${id}/`, data)
+            .delete(`http://localhost:8000/api/campeonatos/apagados/${id}/`, data)
             .then((res) => {
                 axios
-                    .get("https://projeto-2-backend-mavi-fqzl.onrender.com/api/campeonatos/favoritos/")
+                    .get("http://localhost:8000/api/campeonatos/favoritos/")
                     .then((res) => {
                         setVideos(res.data);
                     });
@@ -27,7 +27,7 @@ const JogosFavoritados = () => {
 
     useEffect(() => {
         axios
-        .get("https://projeto-2-backend-mavi-fqzl.onrender.com/api/campeonatos/favoritos/")
+        .get("http://localhost:8000/api/campeonatos/favoritos/")
         .then((res) => {
             setVideos(res.data);
         });
